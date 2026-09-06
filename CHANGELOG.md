@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.4.7 (2026-09-06)</small>
+
+* fix: remove docs redirect ([3de7077](https://github.com/mym0404/react-native-kakao/commit/3de7077))
+* fix(android): skip explicit Kotlin plugin when AGP registers the kotlin extension (#78) ([db93491](https://github.com/mym0404/react-native-kakao/commit/db93491)), closes [#78](https://github.com/mym0404/react-native-kakao/issues/78)
+* chore: manage toolchain with mise (#75) ([203c0be](https://github.com/mym0404/react-native-kakao/commit/203c0be)), closes [#75](https://github.com/mym0404/react-native-kakao/issues/75)
+
 ## <small>2.4.6 (2026-07-11)</small>
 
 * Merge pull request #73 from oesnuj/fix/kakao-login-nonce ([fac2330](https://github.com/mym0404/react-native-kakao/commit/fac2330)), closes [#73](https://github.com/mym0404/react-native-kakao/issues/73)
