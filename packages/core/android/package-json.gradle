@@ -44,3 +44,19 @@ ext.getWorkspaceProject = { name ->
     }
     return ret
 }
+
+ext.applyPlugins = {
+    project.pluginManager.apply('com.android.library')
+
+    // AGP 9 ships built-in Kotlin support and registers the `kotlin` extension
+    // itself. Applying the Kotlin plugin on top of it fails configuration with
+    // "Cannot add extension with name 'kotlin'". Only apply it when nothing has
+    // registered that extension yet.
+    if (project.extensions.findByName('kotlin') == null) {
+        project.pluginManager.apply('kotlin-android')
+    }
+
+    if (rootProject.findProperty('newArchEnabled') == 'true') {
+        project.pluginManager.apply('com.facebook.react')
+    }
+}
